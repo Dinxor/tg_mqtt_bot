@@ -50,9 +50,9 @@ def get_data(key, alldata):
     elif key == '2':
         rez = ''
         try:
-            for n, f in sorted(tree['air']['greenhouse'].items(), key=lambda item: int(item[0])):
+            for n, f in sorted(tree['greenhouse'].items(), key=lambda item: int(item[0])):
                 rez += '№ %s:   %s \n' % (n, f['temp'])
-            rez += tree['air']['greenhouse']['1']['upd']
+            rez += tree['greenhouse']['1']['upd']
             return rez
         except:
             return 'Нет данных'
